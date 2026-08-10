@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int countA = 0;
+        int countB = 0;
+        int countC = 0;
+        int countD = 0;
+        int countF = 0;
+        int totalMarks = 0;
+
+        for (int i = 0; i < n; i++) {
+            int marks = sc.nextInt();
+            totalMarks += marks;
+
+            if (marks >= 90 && marks <= 100) {
+                countA++;
+            } else if (marks >= 80) {
+                countB++;
+            } else if (marks >= 70) {
+                countC++;
+            } else if (marks >= 60) {
+                countD++;
+            } else {
+                countF++;
+            }
+        }
+
+        double average = (double) totalMarks / n;
+
+        System.out.println("A = " + countA);
+        System.out.println("B = " + countB);
+        System.out.println("C = " + countC);
+        System.out.println("D = " + countD);
+        System.out.println("F = " + countF);
+        System.out.println("Average = " + average);
+
+        sc.close();
+    }
+}
+  
+input 
+5
+95 82 74 61 45
